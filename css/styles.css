@@ -1,0 +1,129 @@
+.card {
+    border-radius: 0;
+    border: none;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  body {
+    
+    background-image: url(https://lamenteesmaravillosa.com/wp-content/uploads/2019/03/libro-leyes-martillo-juez.jpg);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+
+  }
+
+
+  
+  
+  
+  .jumbotron {
+    margin: 10px; 
+    margin-left: -3px; 
+    background-color: rgb(221, 215, 203);
+  }
+  
+  header {
+    color: rgb(221, 215, 203);
+    border-radius: 16px;
+  }
+  
+  .col-md-6 { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+    background-color: rgb(212, 200, 184);
+    border-radius: 16px;
+  }
+  .col-md-6 h2{ 
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+  }
+  .text{
+    padding-right: 20px;
+  }
+  
+
+  
+  
+  .nav-wraper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem; 
+  }
+  nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+    color: rgb(221, 215, 203);
+  }
+  nav .logo{
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+  }
+  .logo img{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 2px solid #a6c3e0;
+  }
+  .menu ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: rgb(221, 215, 203);
+  }
+  .menu ul li a{
+    border: 2px solid #a6c3e0;
+    border-radius: 10%;
+    background-color:#a6c3e0 ;
+    padding: 10px;
+    text-decoration: none;
+    color: black; 
+    font-weight: 700   
+  }
+  nav #toggle, nav label{
+    display: none;
+  }
+  @media (max-width: 800px){
+  
+    nav .menu{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+    nav label{
+        display: inline-flex;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu{
+        height: 100%;
+    }
+  }
