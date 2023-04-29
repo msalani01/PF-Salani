@@ -1,0 +1,69 @@
+// Definir variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Definir mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Definir estilos
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $secondary-color;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  @include border-radius(5px);
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Anidamiento
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $secondary-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
