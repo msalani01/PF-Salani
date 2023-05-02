@@ -1,0 +1,72 @@
+/* Variables */
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+/* Estilos para encabezado */
+header {
+  background-color: #6c757d;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 1rem;
+}
+header nav ul li a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Estilos para el contenido principal */
+main {
+  padding: 2rem;
+  /* Estilos para el formulario */
+}
+main section {
+  margin-bottom: 2rem;
+}
+main section h2 {
+  font-size: 1.8rem;
+}
+main section p {
+  margin-bottom: 1rem;
+}
+main form label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,69 +1,80 @@
-// Definir variables
+/* Variables */
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 
-// Definir mixins
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-// Definir estilos
 body {
   font-family: 'Open Sans', sans-serif;
-  color: $secondary-color;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  color: $primary-color;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
 a {
   color: $primary-color;
   text-decoration: none;
-
   &:hover {
     text-decoration: underline;
   }
 }
 
-.btn {
-  @include border-radius(5px);
-  background-color: $primary-color;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1rem 0;
+  line-height: 1.2;
 }
 
-// Anidamiento
-nav {
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Estilos para encabezado */
+header {
+  background-color: $secondary-color;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    li {
-      display: inline-block;
-      margin-right: 10px;
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        color: $secondary-color;
-
-        &:hover {
-          color: $primary-color;
+  nav {
+    ul {
+      display: flex;
+      li {
+        margin-left: 1rem;
+        a {
+          font-size: 1.2rem;
+          color: #fff;
         }
       }
     }
   }
+}
+
+/* Estilos para el contenido principal */
+main {
+  padding: 2rem;
+  section {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* Estilos para el formulario */
+  form {
+    label {
+      display: block;
+      font-size: 1.2rem;
+    }
+  }   
 }
