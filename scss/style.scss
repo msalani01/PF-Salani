@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
+  background-color: #cfb997;
 }
 
 a {
@@ -28,29 +29,36 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 1rem 0;
   line-height: 1.2;
+  color: #007bff;
 }
 
 /* Estilos para encabezado */
 header {
-  background-color: $secondary-color;
+  background-color: #fff;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
   h1 {
     font-size: 2rem;
-    color: #fff;
+    color: $secondary-color;
   }
 
   nav {
+
     ul {
       display: flex;
       li {
         margin-left: 1rem;
         a {
           font-size: 1.2rem;
-          color: #fff;
+          color: #395B64;
+          background-color: $primary-color;
+          border-radius: 18px;
+          padding: 10px;
+          margin: 5px;
         }
       }
     }
@@ -59,7 +67,16 @@ header {
 
 /* Estilos para el contenido principal */
 main {
+
+  .jumbotron {
+    margin-top: 15px;
+  }
+
+  .row {
   padding: 2rem;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 16px;
   section {
     margin-bottom: 2rem;
     h2 {
@@ -67,14 +84,52 @@ main {
     }
     p {
       margin-bottom: 1rem;
+      background-color: white;
+    }
     }
   }
-
+}
   /* Estilos para el formulario */
   form {
     label {
       display: block;
-      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
     }
-  }   
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #000000;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+        border-color: #0077cc;
+        box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.3);
+      }
+    }
+    input[type="submit"] {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#0077cc, 10%);
+      }
+    }
+  }
+
+.col-md-6 {
+  p {
+    background-color: white;
+    padding: 5px;
+    border-radius: 16px;
+  }
 }

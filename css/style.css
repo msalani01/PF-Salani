@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
+  background-color: #cfb997;
 }
 
 a {
@@ -25,11 +26,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 1rem 0;
   line-height: 1.2;
+  color: #007bff;
 }
 
 /* Estilos para encabezado */
 header {
-  background-color: #6c757d;
+  background-color: #fff;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -37,7 +39,7 @@ header {
 }
 header h1 {
   font-size: 2rem;
-  color: #fff;
+  color: #6c757d;
 }
 header nav ul {
   display: flex;
@@ -47,26 +49,75 @@ header nav ul li {
 }
 header nav ul li a {
   font-size: 1.2rem;
-  color: #fff;
+  color: #395B64;
+  background-color: #007bff;
+  border-radius: 18px;
+  padding: 10px;
+  margin: 5px;
 }
 
 /* Estilos para el contenido principal */
-main {
-  padding: 2rem;
-  /* Estilos para el formulario */
+main .jumbotron {
+  margin-top: 15px;
 }
-main section {
+main .row {
+  padding: 2rem;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+main .row section {
   margin-bottom: 2rem;
 }
-main section h2 {
+main .row section h2 {
   font-size: 1.8rem;
 }
-main section p {
+main .row section p {
   margin-bottom: 1rem;
+  background-color: white;
 }
-main form label {
+
+/* Estilos para el formulario */
+form label {
   display: block;
-  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.3);
+}
+form input[type=submit] {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+form input[type=submit]:hover {
+  background-color: #005999;
+}
+
+.col-md-6 p {
+  background-color: white;
+  padding: 5px;
+  border-radius: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
