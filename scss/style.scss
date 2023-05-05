@@ -39,6 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
   
 
   h1 {
@@ -47,10 +48,11 @@ header {
   }
 
   nav {
-
+    transition: all 11s ease;
     ul {
       display: flex;
-      li {
+      li:hover {
+        background-color: #ffffff;
         margin-left: 1rem;
         a {
           font-size: 1.2rem;

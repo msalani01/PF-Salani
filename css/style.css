@@ -36,18 +36,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 header h1 {
   font-size: 2rem;
   color: #6c757d;
 }
+header nav {
+  transition: all 11s ease;
+}
 header nav ul {
   display: flex;
 }
-header nav ul li {
+header nav ul li:hover {
+  background-color: #ffffff;
   margin-left: 1rem;
 }
-header nav ul li a {
+header nav ul li:hover a {
   font-size: 1.2rem;
   color: #395B64;
   background-color: #007bff;
