@@ -1,69 +1,139 @@
-// Definir variables
+/* Variables */
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 
-// Definir mixins
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-// Definir estilos
 body {
   font-family: 'Open Sans', sans-serif;
-  color: $secondary-color;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  color: $primary-color;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-image:url(https://i.pinimg.com/originals/ac/0a/78/ac0a7827c1d3666c90ac4a663956d411.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
   color: $primary-color;
   text-decoration: none;
-
   &:hover {
     text-decoration: underline;
   }
 }
 
-.btn {
-  @include border-radius(5px);
-  background-color: $primary-color;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1rem 0;
+  line-height: 1.2;
+  color: #007bff;
 }
 
-// Anidamiento
-nav {
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Estilos para encabezado */
+header {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  
 
-    li {
-      display: inline-block;
-      margin-right: 10px;
+  h1 {
+    font-size: 2rem;
+    color: $secondary-color;
+  }
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        color: $secondary-color;
-
-        &:hover {
-          color: $primary-color;
+  nav {
+    transition: all 11s ease;
+    ul {
+      display: flex;
+      li:hover {
+        background-color: #ffffff;
+        margin-left: 1rem;
+        a {
+          font-size: 1.2rem;
+          color: #395B64;
+          background-color: $primary-color;
+          border-radius: 18px;
+          padding: 10px;
+          margin: 5px;
         }
       }
     }
+  }
+}
+
+/* Estilos para el contenido principal */
+main {
+
+  .jumbotron {
+    margin-top: 15px;
+  }
+
+  .row {
+  padding: 2rem;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 16px;
+  section {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      background-color: white;
+    }
+    }
+  }
+}
+  /* Estilos para el formulario */
+  form {
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #000000;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+        border-color: #0077cc;
+        box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.3);
+      }
+    }
+    input[type="submit"] {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#0077cc, 10%);
+      }
+    }
+  }
+
+.col-md-6 {
+  p {
+    background-color: white;
+    padding: 5px;
+    border-radius: 16px;
   }
 }
