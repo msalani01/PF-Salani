@@ -1,6 +1,21 @@
 /* Variables */
 $primary-color: #007bff;
 $secondary-color: #6c757d;
+$ancho-maximo: 600px;
+$ancho-medio: 768px;
+$ancho-pequeno: 480px;
+
+
+/*mixing*/;
+@mixin custom-paragraph {
+  p {
+    /* Estilos para la etiqueta <p> */
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+}
+
+
 
 /* Estilos globales */
 * {
@@ -9,15 +24,24 @@ $secondary-color: #6c757d;
   padding: 0;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-image:url(https://i.pinimg.com/originals/ac/0a/78/ac0a7827c1d3666c90ac4a663956d411.png) ;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
+
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-image:url(https://i.pinimg.com/originals/ac/0a/78/ac0a7827c1d3666c90ac4a663956d411.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container {
+      footer {
+        background-color: white;
+        border-radius: 5px;
+      }
+    }
+  }
 
 a {
   color: $primary-color;
@@ -50,19 +74,19 @@ header {
   }
 
   nav {
-    transition: all 11s ease;
     ul {
       display: flex;
-      li:hover {
+      li {
         background-color: #ffffff;
         margin-left: 1rem;
-        a {
+        a:hover {
           font-size: 1.2rem;
           color: #395B64;
           background-color: $primary-color;
           border-radius: 18px;
           padding: 10px;
           margin: 5px;
+          transition: all 0.3s ease-in;
         }
       }
     }
@@ -87,8 +111,7 @@ main {
       font-size: 1.8rem;
     }
     p {
-      margin-bottom: 1rem;
-      background-color: white;
+      @include custom-paragraph;
     }
     }
   }
@@ -99,6 +122,11 @@ main {
       display: block;
       margin-bottom: 0.5rem;
       font-weight: bold;
+      color:  #007bff;
+      background-color: #fff;
+      width: 75px;
+      border-radius: 5px;
+      margin: 10px;
     }
     input[type="text"],
     input[type="email"],
@@ -135,5 +163,29 @@ main {
     background-color: white;
     padding: 5px;
     border-radius: 16px;
+  }
+}
+
+@media (max-width: $ancho-maximo) {
+  // Estilos dentro de la media query
+  body {
+    background-color: white;
+  }
+}
+
+.col-md-12 {
+  p {
+    background-color: white;
+    padding: 5px;
+    border-radius: 16px;
+  }
+  
+  @media (max-width: $ancho-medio) {
+    @include custom-paragraph
+    
+  }
+  
+  @media (max-width: $ancho-pequeno) {
+    @include custom-paragraph 
   }
 }
