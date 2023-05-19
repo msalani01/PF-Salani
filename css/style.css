@@ -16,6 +16,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+body .container .row {
+  margin: 5px;
+}
 body .container footer {
   background-color: white;
   border-radius: 5px;
@@ -43,7 +46,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+}
+header .navbar navbar-expand-sm navbar-light bg-light {
+  height: 20px;
 }
 header h1 {
   font-size: 2rem;
@@ -63,7 +68,7 @@ header nav ul li a:hover {
   border-radius: 18px;
   padding: 10px;
   margin: 5px;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /* Estilos para el contenido principal */
