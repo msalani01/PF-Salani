@@ -1,200 +1,207 @@
-/* Variables */
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$ancho-maximo: 600px;
-$ancho-medio: 768px;
-$ancho-pequeno: 480px;
-
-
-/*mixing*/;
-@mixin custom-paragraph {
-  p {
-    /* Estilos para la etiqueta <p> */
-    margin-bottom: 1rem;
-    background-color: white;
-  }
-}
-
-
-
-/* Estilos globales */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-image:url(https://i.pinimg.com/originals/ac/0a/78/ac0a7827c1d3666c90ac4a663956d411.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .container {
-      .row {
-        margin: 5px;
-      }
-
-      footer {
+    /* Variables */
+    $primary-color: #007bff;
+    $secondary-color: #6c757d;
+    $ancho-maximo: 600px;
+    $ancho-medio: 768px;
+    $ancho-pequeno: 480px;
+    
+    
+    /*mixing*/;
+    @mixin custom-paragraph {
+      p {
+        /* Estilos para la etiqueta <p> */
+        margin-bottom: 1rem;
         background-color: white;
-        border-radius: 5px;
       }
     }
-  }
-
-a {
-  color: $primary-color;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin: 1rem 0;
-  line-height: 1.2;
-  color: #007bff;
-}
-
-/* Estilos para encabezado */
-header {
-  background-color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-
-  .navbar navbar-expand-sm navbar-light bg-light {
-
-    height: 20px;
-  }
-  
-
-  h1 {
-    font-size: 2rem;
-    color: $secondary-color;
-  }
-
-  nav {
-    ul {
+    
+    
+    
+    /* Estilos globales */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    
+    
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        background-image:url(https://i.pinimg.com/originals/ac/0a/78/ac0a7827c1d3666c90ac4a663956d411.png) ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .container {
+          .card {
+            margin: 5px;
+          }
+          .row {
+            margin: 50px;
+          }
+    
+          footer {
+            @use footer
+          }
+            
+             
+        }  
+             
+        
+      }
+    
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+      margin: 1rem 0;
+      line-height: 1.2;
+      color: #007bff;
+    }
+    
+    /* Estilos para encabezado */
+    header {
+      background-color: #fff;
+      padding: 1rem;
       display: flex;
-      li {
-        background-color: #ffffff;
-        margin-left: 1rem;
-        a:hover {
-          font-size: 1.2rem;
-          color: #395B64;
-          background-color: $primary-color;
-          border-radius: 18px;
-          padding: 10px;
-          margin: 5px;
-          transition: all 0.2s ease-in;
+      justify-content: space-between;
+      align-items: center;
+      
+    
+      .navbar navbar-expand-sm navbar-light bg-light {
+    
+        height: 20px;
+      }
+      
+    
+      h1 {
+        font-size: 2rem;
+        color: $secondary-color;
+      }
+    
+      nav {
+        ul {
+          display: flex;
+          li {
+            background-color: #ffffff;
+            margin-left: 1rem;
+            a:hover {
+              font-size: 1.2rem;
+              color: #395B64;
+              background-color: $primary-color;
+              border-radius: 18px;
+              padding: 10px;
+              margin: 5px;
+              transition: all 0.2s ease-in;
+            }
+          }
         }
       }
     }
-  }
-}
-
-/* Estilos para el contenido principal */
-main {
-
-  .jumbotron {
-    margin-top: 15px;
-  }
-
-  .row {
-  padding: 2rem;
-  margin: 15px;
-  background-color: #fff;
-  border-radius: 16px;
-  section {
-    margin-bottom: 2rem;
-    h2 {
-      font-size: 1.8rem;
-    }
-    p {
-      @include custom-paragraph;
-    }
-    }
-  }
-}
-  /* Estilos para el formulario */
-  form {
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color:  #007bff;
-      background-color: #fff;
-      width: 75px;
-      border-radius: 5px;
-      margin: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      display: block;
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #000000;
-      border-radius: 0.25rem;
-      font-size: 1rem;
-      &:focus {
-        outline: none;
-        border-color: #0077cc;
-        box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.3);
-      }
-    }
-    input[type="submit"] {
-      background-color: #0077cc;
-      color: #fff;
-      border: none;
-      border-radius: 0.25rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      &:hover {
-        background-color: darken(#0077cc, 10%);
-      }
-    }
-  }
-
-.col-md-6 {
-  p {
-    background-color: white;
-    padding: 5px;
-    border-radius: 16px;
-  }
-}
-
-@media (max-width: $ancho-maximo) {
-  // Estilos dentro de la media query
-  body {
-    background-color: white;
-  }
-}
-
-.col-md-12 {
-  p {
-    background-color: white;
-    padding: 5px;
-    border-radius: 16px;
-  }
-  
-  @media (max-width: $ancho-medio) {
-    @include custom-paragraph
     
-  }
-  
-  @media (max-width: $ancho-pequeno) {
-    @include custom-paragraph 
-  }
-}
+    /* Estilos para el contenido principal */
+    main {
+    
+      .jumbotron {
+        margin-top: 15px;
+      }
+    
+      .row {
+      padding: 2rem;
+      margin: 15px;
+      background-color: #fff;
+      border-radius: 16px;
+      section {
+        margin-bottom: 2rem;
+        h2 {
+          font-size: 1.8rem;
+        }
+        p {
+          @include custom-paragraph;
+        }
+        }
+      }
+    }
+      /* Estilos para el formulario */
+      form {
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+          color:  #007bff;
+          background-color: #fff;
+          width: 75px;
+          border-radius: 5px;
+          margin: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          display: block;
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #000000;
+          border-radius: 0.25rem;
+          font-size: 1rem;
+          &:focus {
+            outline: none;
+            border-color: #0077cc;
+            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.3);
+          }
+        }
+        input[type="submit"] {
+          background-color: #0077cc;
+          color: #fff;
+          border: none;
+          border-radius: 0.25rem;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          cursor: pointer;
+          &:hover {
+            background-color: darken(#0077cc, 10%);
+          }
+        }
+      }
+    
+    .col-md-6 {
+      p {
+        background-color: white;
+        padding: 5px;
+        border-radius: 16px;
+      }
+    }
+    
+    @media (max-width: $ancho-maximo) {
+      // Estilos dentro de la media query
+      body {
+        background-color: white;
+      }
+    }
+    
+    .col-md-12 {
+      p {
+        background-color: white;
+        padding: 5px;
+        border-radius: 16px;
+      }
+      
+      @media (max-width: $ancho-medio) {
+        @include custom-paragraph
+        
+      }
+      
+      @media (max-width: $ancho-pequeno) {
+        @include custom-paragraph 
+      }
+    }
+    

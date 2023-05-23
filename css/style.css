@@ -16,14 +16,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body .container .row {
+body .container .card {
   margin: 5px;
 }
-body .container footer {
-  background-color: white;
-  border-radius: 5px;
+body .container .row {
+  margin: 50px;
 }
-
 a {
   color: #007bff;
   text-decoration: none;
